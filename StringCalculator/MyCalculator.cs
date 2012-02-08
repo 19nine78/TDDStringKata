@@ -5,8 +5,17 @@ using System.Text;
 
 namespace StringCalculator
 {
+    /// <summary>
+    /// Basic calculator class used to perform the String Calculator
+    /// code Kata http://osherove.com/tdd-kata-1/
+    /// </summary>
     public class MyCalculator
     {
+        /// <summary>
+        /// Add method
+        /// </summary>
+        /// <param name="numbers"></param>
+        /// <returns></returns>
         public int Add(string numbers)
         {
             if (numbers == "")
@@ -30,7 +39,5 @@ namespace StringCalculator
 
             return total;
         }
-
-
     }
 }
