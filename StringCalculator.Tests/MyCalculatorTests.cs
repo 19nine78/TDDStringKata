@@ -39,8 +39,10 @@ namespace StringCalculator.Tests
             Assert.AreEqual(3,result);
         }
 
+        
         [TestCase("1,2,3",6)]
         [TestCase("1,2,3,4", 10)]
+        [TestCase("1,2,3,4,5", 15)]
         public void Add_MultipleNumbers_ReturnsTheirSum(string numbers, int expected)
         {
             MyCalculator c = GetNewCalc();
