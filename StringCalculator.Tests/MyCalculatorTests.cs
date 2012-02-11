@@ -52,6 +52,30 @@ namespace StringCalculator.Tests
             Assert.AreEqual(expected,result);
         }
 
+        [TestCase("1\n2,3",6)]
+        [TestCase("1,\n", 1)]
+        public void Add_MultipleNumbersWithNewLineOrCommaDelimiter_ReturnsTheirSum(string numbers, int expected)
+        {
+
+            MyCalculator c = GetNewCalc();
+
+            int result = c.Add(numbers);
+
+            Assert.AreEqual(expected,result);
+        }
+
+        [TestCase("//;\n1;2",3)]
+        public void Add_MultipleNumbersSpecifyingTheDelimiter_ReturnsTheirSum(string numbers, int expected)
+        {
+            MyCalculator c = GetNewCalc();
+
+            int result = c.Add(numbers);
+
+            Assert.AreEqual(expected,result);
+
+
+        }
+
 
         private static MyCalculator GetNewCalc()
         {
